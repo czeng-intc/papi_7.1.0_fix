@@ -485,6 +485,15 @@ _rapl_init_component( int cidx )
 			different_units=1;
 			break;
 
+		case 143:	/* Sapphire Rapids (SPR) */
+			package_avail=1;
+			pp0_avail=0;
+			pp1_avail=0;
+			dram_avail=1;
+			psys_avail=0;
+			different_units=0;
+			break;
+
 		default:	/* not a supported model */
 			strCpy=strncpy(_rapl_vector.cmp_info.disabled_reason,
 				"CPU model not supported",
